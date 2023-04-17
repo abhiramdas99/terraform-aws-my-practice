@@ -1,1 +1,1 @@
-# terraform-aws-my-practice
+# Terraform code for practice 
