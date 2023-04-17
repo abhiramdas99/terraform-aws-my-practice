@@ -1,5 +1,5 @@
 
-variable AWS_REGION {
+variable "AWS_REGION" {
   default = "ap-south-1"
 }
 
@@ -43,10 +43,10 @@ variable "PrivSub3CIDR" {
   default = "172.21.6.0/24"
 }
 
-variable AMIS {
-  type = map
+variable "AMIS" {
+  type = map(any)
   default = {
-    ap-south-1="ami-03a933af70fa97ad2"
+    ap-south-1 = "ami-03a933af70fa97ad2"
   }
 }
 
@@ -71,7 +71,7 @@ variable "rmquser" {
 }
 
 variable "rmqpass" {
-  default="Terraform@2023"
+  default = "Terraform@2023"
 }
 
 variable "dbuser" {
@@ -79,7 +79,7 @@ variable "dbuser" {
 }
 
 variable "dbpass" {
-  default="admin123"
+  default = "admin123"
 }
 
 variable "dbname" {
